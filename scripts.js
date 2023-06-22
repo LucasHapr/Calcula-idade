@@ -15,8 +15,8 @@ function age(){
 
     if(month == monthactual){
         if(day < dayactual){
-            ageyear = yearactual - year - 1
-            agemonth = 11          
+            ageyear = yearactual - year
+            agemonth = 0          
             ageday = dayactual - day
         }else{
             if(day == dayactual){
@@ -24,8 +24,8 @@ function age(){
                 agemonth = 0
                 ageday = 0
             }else{
-                ageyear = yearactual - year
-                agemonth = 0
+                ageyear = yearactual - year - 1
+                agemonth = 11
                 ageday = 31 - (Math.abs(dayactual - day))  
             }
         }
@@ -87,7 +87,7 @@ function validatedata(){
         document.getElementById('text-month').style.color = "hsl(0, 1%, 44%)";
     }
 
-    if(year > yearactual){
+    if(year > yearactual || year < 1){
         document.getElementById('year-error').style.display = "block";
         document.getElementById('year').style.borderColor = "red";
         document.getElementById('text-year').style.color = "red";
