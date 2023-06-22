@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+  
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="recebe">
+      <div class="data">
+        <P class="text" id="text-day">DAY</P>
+        <input placeholder="DD" type="number" id="day" oninput="javascript: if(this.value.length > this.maxLength)this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+        <div class="error" id="day-error">Must be a valid day</div>
+      </div>
+      
+      <div class="data">
+        <P class="text" id="text-month">MONTH</P>
+        <input placeholder="MM" type="number" id="month" oninput="javascript: if(this.value.length > this.maxLength)this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+        <div class="error" id="month-error">Must be a valid month</div>
+      </div>
+      
+      <div class="data">
+        <P class="text" id="text-year">YEAR</P>
+        <input placeholder="YYYY" type="number" id="year" oninput="javascript: if(this.value.length > this.maxLength)this.value = this.value.slice(0, this.maxLength);" maxlength="4">
+        <div class="error" id="year-error">Must be in the past</div>
+      </div>
+    </div>
+      
+    <div class="linha">
+      <button><img src="./assets/images/icon-arrow.svg" alt="" onclick="age()"></button>
+    </div>
+
+    <div class="texto">
+      <div class="result">
+        <h1 class="resultado" id="years">--</h1>
+        <h1>years</h1>
+      </div>
+      
+      <div class="result">
+        <h1 class="resultado" id="months">--</h1>
+        <h1>months</h1>
+      </div>
+      
+      <div class="result">
+        <h1 class="resultado" id="days">--</h1>
+        <h1>days</h1>
+      </div>
+    </div>
+
+  </div>
+
+<script src="./scripts.js"></script>
+</body>
+
+</html>
